@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Estudante</title>
+</head>
+<body>
+    <h1>Cadastro de Estudante</h1>
+
+    <form th:action="@{/estudante/salvar}" th:object="${estudante}" method="post">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" th:field="*{nome}" required>
+        </div>
+        <div>
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" th:field="*{dataNascimento}" required>
+        </div>
+        <div>
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso" th:field="*{curso}" required>
+        </div>
+        <div>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" th:field="*{cep}" required>
+        </div>
+        <div>
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" th:field="*{logradouro}" required>
+        </div>
+        <div>
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" th:field="*{complemento}">
+        </div>
+        <div>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" th:field="*{bairro}" required>
+        </div>
+        <div>
+            <label for="localidade">Localidade:</label>
+            <input type="text" id="localidade" th:field="*{localidade}" required>
+        </div>
+        <div>
+            <label for="uf">UF:</label>
+            <input type="text" id="uf" th:field="*{uf}" required>
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
